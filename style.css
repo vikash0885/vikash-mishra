@@ -1833,3 +1833,25 @@ img {
   animation: metallicShine 4s linear infinite;
   opacity: 0.8;
 }
+
+/* BACKGROUND MONOGRAM VM STYLE */
+.bg-monogram {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + var(--mx, 0px)), calc(-50% + var(--my, 0px)));
+  font-family: var(--font-display);
+  font-size: 38vw;
+  font-weight: 900;
+  letter-spacing: -2vw;
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.03) 0%, rgba(255, 0, 255, 0.02) 50%, rgba(255, 215, 0, 0.01) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  pointer-events: none;
+  z-index: -2;
+  user-select: none;
+  filter: blur(1px) drop-shadow(0 0 10px rgba(0, 255, 255, 0.03));
+  line-height: 1;
+  transition: transform 0.3s cubic-bezier(0.1, 0.8, 0.2, 1);
+}
