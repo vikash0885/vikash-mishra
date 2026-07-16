@@ -1008,36 +1008,36 @@ img {
 
 /* Unique Shadows for Project Cards */
 .proj-1 {
-  /* Calc - Yellow/Gold Glow */
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-  border-color: #ffd700;
-}
-
-.proj-1:hover {
-  box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
-  border-color: #ffd700;
-}
-
-.proj-2 {
-  /* Study Buddy - Emerald/Green Glow */
+  /* Food Waste - Green Glow */
   box-shadow: 0 0 20px rgba(46, 204, 113, 0.3);
   border-color: #2ecc71;
 }
 
-.proj-2:hover {
+.proj-1:hover {
   box-shadow: 0 0 40px rgba(46, 204, 113, 0.6);
   border-color: #2ecc71;
 }
 
+.proj-2 {
+  /* AI Resume - Purple Glow */
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+  border-color: #8a2be2;
+}
+
+.proj-2:hover {
+  box-shadow: 0 0 40px rgba(138, 43, 226, 0.6);
+  border-color: #8a2be2;
+}
+
 .proj-3 {
-  /* Pro Task - Red/Pink Glow */
-  box-shadow: 0 0 20px rgba(255, 51, 85, 0.3);
-  border-color: #ff3355;
+  /* Sales Analytics - Blue Glow */
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+  border-color: #2563eb;
 }
 
 .proj-3:hover {
-  box-shadow: 0 0 40px rgba(255, 51, 85, 0.6);
-  border-color: #ff3355;
+  box-shadow: 0 0 40px rgba(37, 99, 235, 0.6);
+  border-color: #2563eb;
 }
 
 .project-img-container {
