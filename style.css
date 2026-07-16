@@ -1881,43 +1881,60 @@ img {
   transition: transform 0.3s cubic-bezier(0.1, 0.8, 0.2, 1);
 }
 
-/* Hero Socials Section */
-.hero-socials {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
+/* Social button row styling */
+.social-button-row {
   margin-top: 15px;
-  margin-bottom: 25px;
 }
 
-.social-icon-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #aaa;
-  text-decoration: none;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-icon-img {
-  width: 20px;
-  height: 20px;
+.btn-icon {
+  width: 18px;
+  height: 18px;
   object-fit: contain;
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
-  transition: transform 0.3s ease, filter 0.3s ease;
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
 }
 
-.social-icon-link:hover {
-  color: #fff;
+/* LinkedIn Button Style */
+.btn-linkedin {
+  background: transparent;
+  color: #fff !important;
+  border: 1px solid rgba(0, 160, 220, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 160, 220, 0.1);
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-linkedin:hover {
+  background: rgba(0, 160, 220, 0.1);
+  border-color: #00a0dc;
+  box-shadow: 0 4px 20px rgba(0, 160, 220, 0.4);
   transform: translateY(-2px);
 }
 
-.social-icon-link:hover .social-icon-img {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.6));
+.btn-linkedin:hover .btn-icon {
+  transform: scale(1.15);
+}
+
+/* Instagram Button Style */
+.btn-instagram {
+  background: transparent;
+  color: #fff !important;
+  border: 1px solid rgba(255, 0, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(255, 0, 255, 0.1);
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-instagram:hover {
+  background: rgba(255, 0, 255, 0.1);
+  border-color: #ff00ff;
+  box-shadow: 0 4px 20px rgba(255, 0, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-instagram:hover .btn-icon {
+  transform: scale(1.15);
 }
 
 /* Footer Links with Custom Icons */
