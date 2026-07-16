@@ -1007,35 +1007,57 @@ img {
 }
 
 /* Unique Shadows for Project Cards */
-.proj-1 {
-  /* Food Waste - Green Glow */
+.proj-study-buddy {
+  /* Green/Emerald Glow */
   box-shadow: 0 0 20px rgba(46, 204, 113, 0.3);
   border-color: #2ecc71;
 }
 
-.proj-1:hover {
+.proj-study-buddy:hover {
   box-shadow: 0 0 40px rgba(46, 204, 113, 0.6);
   border-color: #2ecc71;
 }
 
-.proj-2 {
-  /* AI Resume - Purple Glow */
+.proj-pro-task {
+  /* Red/Pink Glow */
+  box-shadow: 0 0 20px rgba(255, 51, 85, 0.3);
+  border-color: #ff3355;
+}
+
+.proj-pro-task:hover {
+  box-shadow: 0 0 40px rgba(255, 51, 85, 0.6);
+  border-color: #ff3355;
+}
+
+.proj-food-waste {
+  /* Green Glow */
+  box-shadow: 0 0 20px rgba(46, 204, 113, 0.3);
+  border-color: #2ecc71;
+}
+
+.proj-food-waste:hover {
+  box-shadow: 0 0 40px rgba(46, 204, 113, 0.6);
+  border-color: #2ecc71;
+}
+
+.proj-resume-analyzer {
+  /* Purple Glow */
   box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
   border-color: #8a2be2;
 }
 
-.proj-2:hover {
+.proj-resume-analyzer:hover {
   box-shadow: 0 0 40px rgba(138, 43, 226, 0.6);
   border-color: #8a2be2;
 }
 
-.proj-3 {
-  /* Sales Analytics - Blue Glow */
+.proj-sales {
+  /* Blue Glow */
   box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
   border-color: #2563eb;
 }
 
-.proj-3:hover {
+.proj-sales:hover {
   box-shadow: 0 0 40px rgba(37, 99, 235, 0.6);
   border-color: #2563eb;
 }
