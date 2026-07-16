@@ -1276,6 +1276,14 @@ img {
   justify-items: center;
 }
 
+.exp-item {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Consolidated .exp-card styles */
 .exp-card {
   width: 100%;
