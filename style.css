@@ -1744,15 +1744,11 @@ img {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-image: url('form-bg-final.jpg');
-  /* User requested background */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: var(--glass-bg);
   padding: 40px;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
 }
 
