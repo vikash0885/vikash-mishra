@@ -1,24 +1,24 @@
 /* RESET & CORE - Updated 2026 */
 :root {
-  /* White Light Theme Palette */
-  --bg: #ffffff;
-  --text: #111111;
-  --text-dim: #555555;
+  /* Premium 4K HD Palette */
+  --bg: #050505;
+  --text: #ffffff;
+  --text-dim: #999999;
 
   /* Metallic Gradients */
-  --metallic-platinum: linear-gradient(to bottom, #333333 20%, #555555 40%, #888888 50%, #333333 55%, #666666 65%, #111111 80%);
-  --metallic-gold: linear-gradient(to bottom, #b8860b 0%, #ffcc00 40%, #ff9900 50%, #cc6600 60%, #ffcc00 100%);
+  --metallic-platinum: linear-gradient(to bottom, #ffffff 20%, #e6e6e6 40%, #999999 50%, #4d4d4d 55%, #999999 65%, #ffffff 80%);
+  --metallic-gold: linear-gradient(to bottom, #ffffff 0%, #ffcc00 40%, #ff9900 50%, #cc6600 60%, #ffcc00 100%);
 
   /* Brand Colors */
-  --accent-blue: #1d4ed8;
-  --accent-lime: #4a9c00;
+  --accent-blue: #3b82f6;
+  --accent-lime: #ccff00;
 
   --font-display: 'Syne', sans-serif;
   --font-body: 'Inter', sans-serif;
 
-  /* Glassmorphism - light */
-  --glass-bg: rgba(0, 0, 0, 0.04);
-  --glass-border: rgba(0, 0, 0, 0.12);
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
 }
 
 * {
@@ -33,7 +33,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: #050505;
   background-attachment: fixed;
   color: var(--text);
   font-family: var(--font-body);
@@ -57,8 +57,8 @@ body::before {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.04), transparent 40%),
-    radial-gradient(circle at 80% 20%, rgba(0, 200, 150, 0.03), transparent 30%);
+  background: radial-gradient(circle at 50% 50%, rgba(43, 0, 255, 0.08), transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(100, 255, 218, 0.05), transparent 30%);
   animation: rotateBackground 30s linear infinite;
   z-index: -1;
   pointer-events: none;
@@ -103,7 +103,7 @@ img {
 .cursor-dot {
   width: 5px;
   height: 5px;
-  background-color: #111111;
+  background-color: white;
   position: fixed;
   top: 0;
   left: 0;
@@ -116,7 +116,7 @@ img {
 .cursor-outline {
   width: 30px;
   height: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   position: fixed;
   top: 0;
   left: 0;
@@ -138,10 +138,10 @@ img {
   align-items: center;
   z-index: 100;
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   animation: slideDown 1s ease-out forwards;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(10, 16, 24, 0.7);
 }
 
 @keyframes slideDown {
@@ -367,17 +367,17 @@ img {
   position: relative;
   display: inline-block;
   background: linear-gradient(to bottom,
-      #111111 20%,
-      #333333 40%,
-      #666666 50%,
-      #222222 55%,
-      #444444 65%,
-      #111111 80%);
+      #ffffff 20%,
+      #e6e6e6 40%,
+      #999999 50%,
+      #4d4d4d 55%,
+      #999999 65%,
+      #ffffff 80%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
   animation: metallicShine 4s linear infinite;
   letter-spacing: -2px;
   overflow: hidden;
@@ -436,7 +436,7 @@ img {
 .indented {
   margin-left: 5vw;
   color: transparent;
-  -webkit-text-stroke: 1px #222222;
+  -webkit-text-stroke: 1px #fff;
   transition: all 0.4s ease;
 }
 
@@ -446,12 +446,13 @@ img {
   font-size: 1.8rem;
   margin: 20px 0 10px 0;
   font-family: 'Share Tech Mono', monospace;
+  /* Tech feel */
   background: linear-gradient(to bottom,
-      #b8860b 0%,
-      #cc8800 40%,
+      #ffffff 0%,
+      #ffcc00 40%,
       #ff9900 50%,
       #cc6600 60%,
-      #b8860b 100%);
+      #ffcc00 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -462,16 +463,16 @@ img {
 .typing-text {
   font-weight: 700;
   background: linear-gradient(to bottom,
-      #b8860b 0%,
-      #cc8800 40%,
+      #ffffff 0%,
+      #ffcc00 40%,
       #ff9900 50%,
       #cc6600 60%,
-      #b8860b 100%);
+      #ffcc00 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 0 2px rgba(184, 134, 11, 0.4));
+  filter: drop-shadow(0 0 2px rgba(255, 204, 0, 0.3));
   animation: metallicGoldShine 4s linear infinite;
   position: relative;
   display: inline-block;
@@ -542,25 +543,25 @@ img {
   font-size: 1.25rem;
   font-style: italic;
   font-weight: 500;
-  /* Dark readable for white bg */
+  /* Luminous Cyber-Metallic finish */
   background: linear-gradient(90deg,
-      #111111 0%,
-      #1d4ed8 25%,
-      #111111 50%,
-      #1d4ed8 75%,
-      #111111 100%);
+      #ffffff 0%,
+      #a5dcfd 25%,
+      #ffffff 50%,
+      #a5dcfd 75%,
+      #ffffff 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   margin-top: 40px;
-  border-left: 3px solid #1d4ed8;
+  border-left: 3px solid #3b82f6;
   padding-left: 25px;
   opacity: 0;
   transform: translateY(20px);
   animation: revealBio 1s cubic-bezier(0.4, 0, 0.2, 1) forwards, metallicShine 8s linear infinite;
   animation-delay: 0.8s, 0s;
-  text-shadow: none;
+  text-shadow: 0 0 1px rgba(165, 220, 253, 0.2);
   transition: filter 0.3s ease;
 }
 
@@ -923,8 +924,8 @@ img {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.88);
-  /* Light tint for white bg */
+  background: rgba(10, 16, 24, 0.85);
+  /* Heavy dark tint */
   z-index: -1;
   transition: opacity 0.3s;
 }
@@ -947,22 +948,22 @@ img {
 .skill-card h3 {
   z-index: 2;
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
-  /* Dark Metallic for white bg */
+  /* Premium Chrome/Silver Gradient */
   background: linear-gradient(to bottom,
-      #111111 0%,
-      #333333 40%,
-      #666666 50%,
-      #222222 55%,
-      #444444 65%,
-      #111111 100%);
+      #ffffff 0%,
+      #e6e6e6 40%,
+      #888888 50%,
+      #444444 55%,
+      #888888 65%,
+      #ffffff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  text-shadow: none;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   animation: metallicShine 3s linear infinite;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
