@@ -1,0 +1,18 @@
+.orders-page {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  max-width: 900px;
+}
+
+.empty-orders {
+  text-align: center;
+  padding: 5rem 2rem;
+  margin-top: 2rem;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
