@@ -86,7 +86,6 @@
         <div class="profile-ring">
           <div class="glow-circle"></div>
           <img src="profile.jpg" alt="Profile" class="profile-img active">
-          <img src="profile2.jpg" alt="Profile" class="profile-img">
         </div>
       </div>
 
@@ -608,17 +607,7 @@
       });
     });
 
-    // Profile Image Rotation logic
-    const profileImages = document.querySelectorAll('.profile-ring .profile-img');
-    let currentImgIndex = 0;
 
-    function rotateProfileImage() {
-      profileImages[currentImgIndex].classList.remove('active');
-      currentImgIndex = (currentImgIndex + 1) % profileImages.length;
-      profileImages[currentImgIndex].classList.add('active');
-    }
-
-    setInterval(rotateProfileImage, 4000); // Change every 4 seconds
 
     // Particles Animation with drifting V and M glyphs
     const canvas = document.getElementById('particles-canvas');
