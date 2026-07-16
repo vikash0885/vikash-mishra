@@ -1997,3 +1997,146 @@ img {
 .footer-social-link[href*="instagram"]:hover .footer-icon-img {
   filter: drop-shadow(0 0 5px rgba(255, 0, 255, 0.8));
 }
+
+/* Highlights Gallery Section */
+.gallery-section {
+  padding: 100px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.gallery-slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0 80px 0; /* space for arrows at bottom */
+}
+
+.gallery-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  gap: 20px;
+  will-change: transform;
+}
+
+.gallery-slide {
+  min-width: calc(33.333% - 14px); /* 3 cards visible on desktop */
+  flex-shrink: 0;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-card {
+  width: 100%;
+  height: 480px; /* Tall portrait cards like Sheryians slider */
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.gallery-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.9) 100%);
+  z-index: 1;
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  z-index: 2;
+  font-family: 'Syne', sans-serif;
+  text-align: center;
+}
+
+.gallery-overlay h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.gallery-overlay p {
+  font-size: 0.9rem;
+  color: var(--primary-accent); /* Neon accent */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Card Hover States */
+.gallery-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: var(--primary-accent);
+  box-shadow: 0 20px 40px rgba(0, 242, 96, 0.3); /* green glow */
+}
+
+/* Controls (Circular Arrows at the bottom center) */
+.gallery-controls {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+}
+
+.gallery-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.gallery-arrow:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive breakpoint for Mobile/Tablet */
+@media (max-width: 900px) {
+  .gallery-slide {
+    min-width: calc(50% - 10px); /* 2 cards on tablet */
+  }
+  .gallery-card {
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-section {
+    padding: 60px 20px;
+  }
+  .gallery-slide {
+    min-width: 100%; /* 1 card on mobile */
+  }
+  .gallery-card {
+    height: 380px;
+  }
+}

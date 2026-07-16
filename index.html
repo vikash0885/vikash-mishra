@@ -433,6 +433,57 @@
       </div>
     </section>
 
+    <!-- Highlights Gallery Section -->
+    <section class="gallery-section" id="gallery">
+      <div class="section-header">MEMORABLE HIGHLIGHTS</div>
+      <div class="gallery-slider-container">
+        <div class="gallery-track">
+          <!-- Slide 1 -->
+          <div class="gallery-slide">
+            <div class="gallery-card glass" style="background-image: url('gallery2.jpg');">
+              <div class="gallery-overlay">
+                <h3>EDC IIT Delhi</h3>
+                <p>Campus Representative</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="gallery-slide">
+            <div class="gallery-card glass" style="background-image: url('gallery3.jpg');">
+              <div class="gallery-overlay">
+                <h3>OpenAI Visit</h3>
+                <p>AI Tech Showcase</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="gallery-slide">
+            <div class="gallery-card glass" style="background-image: url('gallery4.jpg');">
+              <div class="gallery-overlay">
+                <h3>AI Impact Summit</h3>
+                <p>Meeting Global Leaders</p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="gallery-slide">
+            <div class="gallery-card glass" style="background-image: url('gallery5.jpg');">
+              <div class="gallery-overlay">
+                <h3>IIT Delhi Campus</h3>
+                <p>Academic Exposure</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="gallery-controls">
+          <button class="gallery-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>
+          <button class="gallery-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
     <section class="contact-section" id="contact">
       <div class="section-header">GET IN TOUCH</div>
       <div class="contact-container">
@@ -655,7 +706,84 @@
       initParticles();
     });
 
-    /* Slider Logic Removed as per request (Reverted to Grid) */
+    // Gallery Slider Logic
+    const galleryTrack = document.querySelector('.gallery-track');
+    const gallerySlides = document.querySelectorAll('.gallery-slide');
+    const prevBtn = document.querySelector('.prev-arrow');
+    const nextBtn = document.querySelector('.next-arrow');
+    
+    let galleryIndex = 0;
+    
+    function getVisibleCards() {
+      if (window.innerWidth <= 600) return 1;
+      if (window.innerWidth <= 900) return 2;
+      return 3;
+    }
+    
+    function updateGallerySlider() {
+      if (gallerySlides.length === 0) return;
+      const visibleCards = getVisibleCards();
+      const maxIndex = gallerySlides.length - visibleCards;
+      
+      if (galleryIndex > maxIndex) galleryIndex = maxIndex;
+      if (galleryIndex < 0) galleryIndex = 0;
+      
+      const slideWidth = gallerySlides[0].getBoundingClientRect().width;
+      const offset = galleryIndex * (slideWidth + 20); // 20px gap
+      
+      galleryTrack.style.transform = `translateX(-${offset}px)`;
+    }
+    
+    nextBtn.addEventListener('click', () => {
+      const visibleCards = getVisibleCards();
+      if (galleryIndex < gallerySlides.length - visibleCards) {
+        galleryIndex++;
+      } else {
+        galleryIndex = 0;
+      }
+      updateGallerySlider();
+    });
+    
+    prevBtn.addEventListener('click', () => {
+      const visibleCards = getVisibleCards();
+      if (galleryIndex > 0) {
+        galleryIndex--;
+      } else {
+        galleryIndex = gallerySlides.length - visibleCards;
+      }
+      updateGallerySlider();
+    });
+    
+    window.addEventListener('resize', updateGallerySlider);
+    // Initial call
+    updateGallerySlider();
+    
+    // Auto slide logic
+    let galleryInterval = setInterval(() => {
+      const visibleCards = getVisibleCards();
+      if (galleryIndex < gallerySlides.length - visibleCards) {
+        galleryIndex++;
+      } else {
+        galleryIndex = 0;
+      }
+      updateGallerySlider();
+    }, 4000);
+    
+    const galleryContainer = document.querySelector('.gallery-slider-container');
+    galleryContainer.addEventListener('mouseenter', () => {
+      clearInterval(galleryInterval);
+    });
+    galleryContainer.addEventListener('mouseleave', () => {
+      galleryInterval = setInterval(() => {
+        const visibleCards = getVisibleCards();
+        if (galleryIndex < gallerySlides.length - visibleCards) {
+          galleryIndex++;
+        } else {
+          galleryIndex = 0;
+        }
+        updateGallerySlider();
+      }, 4000);
+    });
   </script>
 </body>
 
